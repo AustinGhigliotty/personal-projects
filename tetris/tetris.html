@@ -5,6 +5,8 @@
 	<title>Tetris</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" href="tetris.css">
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+	<script src="tetris.js"></script>
 </head>
 <body>
 	<main class="row">
@@ -13,7 +15,11 @@
 			<p class="text">HOLD</p>
 			<div class="hold"></div>
 		</div>
-		<div class="game"></div>
+		<div class="game">
+			<table class="game-table">
+
+			</table>
+		</div>
 		<div class="right-menu">
 			<p class="text">NEXT</p>
 			<div class="next"></div>
@@ -22,6 +28,5 @@
 		</div>
 		<div class="right-space"></div>
 	</main>
-	<script src="tetris.js"></script>
 </body>
 </html>
