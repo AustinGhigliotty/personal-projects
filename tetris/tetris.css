@@ -2,11 +2,12 @@ body {
     background-color: black;
 }
 .game {
-    width: 369px;
-    height: 729px;
+    width: 351px;
+    height: 700px;
     background-color: blue;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 0;
+    margin-right: 0;
+    box-sizing: content-box;
     border: 5px solid paleturquoise;
 }
 .hold {
@@ -29,6 +30,8 @@ body {
     background-color: skyblue;
     border: 5px solid paleturquoise;
     border-left: 0;
+    text-align: center;
+    vertical-align: center;
 }
 .left-space {
     width: calc(50% - (569px / 2));
@@ -40,4 +43,18 @@ body {
     text-align: center;
     background-color: paleturquoise;
     margin: 0;
+}
+.cell {
+    width: 35px;
+    height: 35px;
+    border: 1px solid dimgray;
+}
+.nextcell {
+    width: 20px;
+    height: 20px;
+    border: 1px solid dimgray;
+}
+.nextedgecell {
+    width: 7px;
+    border: 1px solid dimgray;
 }
