@@ -58,3 +58,6 @@ body {
     width: 7px;
     border: 1px solid dimgray;
 }
+.active {
+    background-color: yellow;
+}

@@ -57,5 +57,62 @@ function spawnBlock() {
 // }
 
 function spawnO() {
-
+    $('.cell-1-5').addClass('active');
+    $('.cell-1-6').addClass('active');
+    $('.cell-2-5').addClass('active');
+    $('.cell-2-6').addClass('active');
+}
+function spawnI() {
+    $('.cell-1-4').addClass('active');
+    $('.cell-1-5').addClass('active');
+    $('.cell-1-6').addClass('active');
+    $('.cell-1-7').addClass('active');
+}
+function spawnZ() {
+    $('.cell-1-5').addClass('active');
+    $('.cell-1-6').addClass('active');
+    $('.cell-2-6').addClass('active');
+    $('.cell-2-7').addClass('active');
+}
+function spawnS() {
+    $('.cell-1-6').addClass('active');
+    $('.cell-1-7').addClass('active');
+    $('.cell-2-5').addClass('active');
+    $('.cell-2-6').addClass('active');
+}
+function spawnJ() {
+    $('.cell-1-5').addClass('active');
+    $('.cell-2-5').addClass('active');
+    $('.cell-2-6').addClass('active');
+    $('.cell-2-7').addClass('active');
+}
+function spawnL() {
+    $('.cell-1-7').addClass('active');
+    $('.cell-2-5').addClass('active');
+    $('.cell-2-6').addClass('active');
+    $('.cell-2-7').addClass('active');
+}
+function spawnT() {
+    $('.cell-1-6').addClass('active');
+    $('.cell-2-5').addClass('active');
+    $('.cell-2-6').addClass('active');
+    $('.cell-2-7').addClass('active');
+}
+if (nexts[0] === 'i') {
+    spawnI();
+} else if (nexts[0] === 'o') {
+    spawnO();
+} else if (nexts[0] === 'z') {
+    spawnZ();
+} else if (nexts[0] === 's') {
+    spawnS();
+} else if (nexts[0] === 'j') {
+    spawnJ();
+} else if (nexts[0] === 'l') {
+    spawnL();
+} else if (nexts[0] === 't') {
+    spawnT();
+}
+function activeBlock() {
+    
 }
