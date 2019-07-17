@@ -2,11 +2,11 @@ function buildGameTable() {
     for (let i = 0; i < 20; i++) {
         console.log(i);
         $('.game-table').append('<tr class="gamerow-' + (i + 1) + '">' +
-            '<td class="cell gamecol-1 cell-' + (i + 1) + '-1"></td><td class="cell gamecol-2 cell-' + (i + 1) + '-2"></td>' +
-            '<td class="cell gamecol-3 cell-' + (i + 1) + '-3"></td><td class="cell gamecol-4 cell-' + (i + 1) + '-4"></td>' +
-            '<td class="cell gamecol-5 cell-' + (i + 1) + '-5"></td><td class="cell gamecol-6 cell-' + (i + 1) + '-6"></td>' +
-            '<td class="cell gamecol-7 cell-' + (i + 1) + '-7"></td><td class="cell gamecol-8 cell-' + (i + 1) + '-8"></td>' +
-            '<td class="cell gamecol-9 cell-' + (i + 1) + '-9"></td><td class="cell gamecol-10 cell-' + (i + 1) + '-10"></td></tr>')
+            '<td class="cell gamecol-1" id="cell-' + (i + 1) + '-1"></td><td class="cell gamecol-2" id="cell-' + (i + 1) + '-2"></td>' +
+            '<td class="cell gamecol-3" id="cell-' + (i + 1) + '-3"></td><td class="cell gamecol-4" id="cell-' + (i + 1) + '-4"></td>' +
+            '<td class="cell gamecol-5" id="cell-' + (i + 1) + '-5"></td><td class="cell gamecol-6" id="cell-' + (i + 1) + '-6"></td>' +
+            '<td class="cell gamecol-7" id="cell-' + (i + 1) + '-7"></td><td class="cell gamecol-8" id="cell-' + (i + 1) + '-8"></td>' +
+            '<td class="cell gamecol-9" id="cell-' + (i + 1) + '-9"></td><td class="cell gamecol-10" id="cell-' + (i + 1) + '-10"></td></tr>')
     }
 }
 function buildNextTable() {
@@ -33,6 +33,7 @@ var nexts = [];
 var hold = '';
 var lines = 0;
 var activeBlock = '';
+var activeCells = [];
 
 
 function onGameStart() {
@@ -57,47 +58,63 @@ function spawnBlock() {
 // }
 
 function spawnO() {
-    $('.cell-1-5').addClass('active');
-    $('.cell-1-6').addClass('active');
-    $('.cell-2-5').addClass('active');
-    $('.cell-2-6').addClass('active');
+    activeBlock = 'o';
+    $('#cell-1-5').addClass('active');
+    $('#cell-1-6').addClass('active');
+    $('#cell-2-5').addClass('active');
+    $('#cell-2-6').addClass('active');
+    activeCells = $('.active');
 }
 function spawnI() {
-    $('.cell-1-4').addClass('active');
-    $('.cell-1-5').addClass('active');
-    $('.cell-1-6').addClass('active');
-    $('.cell-1-7').addClass('active');
+    activeBlock = 'i';
+    $('#cell-1-4').addClass('active');
+    $('#cell-1-5').addClass('active');
+    $('#cell-1-6').addClass('active');
+    $('#cell-1-7').addClass('active');
+    activeCells = $('.active');
 }
 function spawnZ() {
-    $('.cell-1-5').addClass('active');
-    $('.cell-1-6').addClass('active');
-    $('.cell-2-6').addClass('active');
-    $('.cell-2-7').addClass('active');
+    activeBlock = 'z';
+    $('#cell-1-5').addClass('active');
+    $('#cell-1-6').addClass('active');
+    $('#cell-2-6').addClass('active');
+    $('#cell-2-7').addClass('active');
+    activeCells = $('.active');
 }
 function spawnS() {
-    $('.cell-1-6').addClass('active');
-    $('.cell-1-7').addClass('active');
-    $('.cell-2-5').addClass('active');
-    $('.cell-2-6').addClass('active');
+    activeBlock = 's';
+    $('#cell-1-6').addClass('active');
+    $('#cell-1-7').addClass('active');
+    $('#cell-2-5').addClass('active');
+    $('#cell-2-6').addClass('active');
+    activeCells = $('.active');
 }
 function spawnJ() {
-    $('.cell-1-5').addClass('active');
-    $('.cell-2-5').addClass('active');
-    $('.cell-2-6').addClass('active');
-    $('.cell-2-7').addClass('active');
+    activeBlock = 'j';
+    $('#cell-1-5').addClass('active');
+    $('#cell-2-5').addClass('active');
+    $('#cell-2-6').addClass('active');
+    $('#cell-2-7').addClass('active');
+    activeCells = $('.active');
 }
 function spawnL() {
-    $('.cell-1-7').addClass('active');
-    $('.cell-2-5').addClass('active');
-    $('.cell-2-6').addClass('active');
-    $('.cell-2-7').addClass('active');
+    activeBlock = 'l';
+    $('#cell-1-7').addClass('active');
+    $('#cell-2-5').addClass('active');
+    $('#cell-2-6').addClass('active');
+    $('#cell-2-7').addClass('active');
+    activeCells = $('.active');
 }
 function spawnT() {
-    $('.cell-1-6').addClass('active');
-    $('.cell-2-5').addClass('active');
-    $('.cell-2-6').addClass('active');
-    $('.cell-2-7').addClass('active');
+    activeBlock = 't';
+    $('#cell-1-6').addClass('active');
+    $('#cell-2-5').addClass('active');
+    $('#cell-2-6').addClass('active');
+    $('#cell-2-7').addClass('active');
+    activeCells = $('.active');
 }
+
+
 if (nexts[0] === 'i') {
     spawnI();
 } else if (nexts[0] === 'o') {
@@ -113,6 +130,29 @@ if (nexts[0] === 'i') {
 } else if (nexts[0] === 't') {
     spawnT();
 }
+
+function moveDown() {
+    let cellsBlocked = 0;
+    if (
+        activeCells.forEach(function() {
+            if (
+                $('#cell-')
+            ) {
+
+            }
+        })
+    ) {
+
+    }
+}
+
+// const myNumbers = [1,2,3,4];
+// console.log(myNumbers);
+// myNumbers = [];
+// console.log(myNumbers);
+
+
 function activeBlock() {
-    
+
+    setTimeout(function(){}, 150);
 }
